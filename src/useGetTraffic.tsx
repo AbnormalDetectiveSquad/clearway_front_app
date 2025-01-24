@@ -43,7 +43,7 @@ const useTrafficData = () => {
 
       try {
         const fiveMinuteAgo = getFormattedTime()
-        const response = await axios.get<TrafficData[]>(`http://127.0.0.1:8000/prediction/${fiveMinuteAgo}`, {
+        const response = await axios.get<TrafficData[]>(`http://3.34.211.86/prediction/${fiveMinuteAgo}`, {
         });
         setData(response.data);
       } catch (err: any) {
