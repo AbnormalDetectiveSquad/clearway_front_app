@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useTrafficData from "./useGetTraffic.tsx";
+// import useTrafficData from "./useGetTraffic.tsx";
 
 import {lat, lng} from './dummy.js'
 
@@ -10,7 +10,7 @@ import {lat, lng} from './dummy.js'
 // }
 
 const Map = ({value}) => {
-  const { data } = useTrafficData();
+  // const { data } = useTrafficData();
 
   const getData = (t) => {
     const rand = () => {
@@ -82,29 +82,29 @@ const Map = ({value}) => {
       const dummy = getData(value)
 
       // 마커 데이터를 전달하여 함수 호출
-      const markerData = [
-        { lat: 37.4839213108069, lng: 127.03458664768, tm: 5 },
-        {
-          lat: 37.4853984528081,
-          lng: 127.040411152608,
-          tm: 5,
-        },
-        {
-          lat: 37.4856138949331,
-          lng: 127.045849445194,
-          tm: 10,
-        },
-        {
-          lat: 37.4856570993088,
-          lng: 127.045974920003,
-          tm: 5,
-        },
-        {
-          lat: 37.485909309437,
-          lng: 127.043381394049,
-          tm: 15,
-        },
-      ];
+      // const markerData = [
+      //   { lat: 37.4839213108069, lng: 127.03458664768, tm: 5 },
+      //   {
+      //     lat: 37.4853984528081,
+      //     lng: 127.040411152608,
+      //     tm: 5,
+      //   },
+      //   {
+      //     lat: 37.4856138949331,
+      //     lng: 127.045849445194,
+      //     tm: 10,
+      //   },
+      //   {
+      //     lat: 37.4856570993088,
+      //     lng: 127.045974920003,
+      //     tm: 5,
+      //   },
+      //   {
+      //     lat: 37.485909309437,
+      //     lng: 127.043381394049,
+      //     tm: 15,
+      //   },
+      // ];
       addMarkers(map, dummy);
 
       const trafficLayer = new window.naver.maps.TrafficLayer();
