@@ -1,7 +1,9 @@
 import React from "react";
 import CountdownTimer from "./CountDownTimer.tsx";
+import useTrafficData from "./useGetTraffic.tsx";
 
 const Header = () => {
+  const {data} = useTrafficData();
 
 
   return (

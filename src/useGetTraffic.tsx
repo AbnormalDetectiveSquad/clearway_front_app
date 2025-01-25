@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 interface TrafficData {
+  tm: string;
   link_id: string;
   speed: number;
-  start_logitude: number;
-  start_latitude: number;
+  start_logitude?: number;
+  start_latitude?: number;
   middle_logitude: number;
   middle_latitude: number;
-  end_logitude: number;
-  end_latitude: number;
-  year_avg_speed: number;
+  end_logitude?: number;
+  end_latitude?: number;
+  year_avg_velocity: number;
+  five__min: number;
+  ten_min: number;
+  fifteenmin: number;
 }
 
 const useTrafficData = () => {

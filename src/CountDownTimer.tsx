@@ -31,6 +31,7 @@ const CountdownTimer = () => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           startCountdown(); // 카운트가 0이 되면 다시 시작
+          window.location.reload();
           // console.log("restart", new Date().toLocaleString())
         //  setLastUpdated(new Date().toLocaleString())
           return calculateNextFiveMinuteMark(); // 초기화 후 새 카운트
